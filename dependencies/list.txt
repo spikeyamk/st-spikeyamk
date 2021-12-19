@@ -1,0 +1,6 @@
+libxft-bgra
+lib32-libxft-bgra
+ttf-joypixels
+hurfbuzz
+freetype2
+ttf-hack
