@@ -5,10 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:pixelsize=36:antialias=true:autohint=true";
+static char *font = "Hack:pixelsize=18:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	"JoyPixels:pixelsize=36:antialias=true:autohint=true", 
+	"JoyPixels:pixelsize=18:antialias=true:autohint=true", 
 /*	"Hack Nerd Font Mono:pixelsize=18:antialias=true:autohint=true", */
 };
 
