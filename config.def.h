@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:pixelsize=18:antialias=true:autohint=true";
+static char *font = "Ubuntu Mono:pixelsize=18:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 	"JoyPixels:pixelsize=18:antialias=true:autohint=true", 
@@ -99,27 +99,30 @@ char *termname = "st";
  */
 unsigned int tabspaces = 8;
 
+/* bg opacity */
+float alpha = 0.8;
+
 /* Terminal colors (16 first used in escape sequence) */
 const char *colorname[] = {
 
   /* 8 normal colors */
   [0] = "#0f061b", /* black   */
-  [1] = "#A35B67", /* red     */
+  [1] = "#eb6373", /* red     */
   [2] = "#418B76", /* green   */
   [3] = "#D59175", /* yellow  */
-  [4] = "#4C608B", /* blue    */
-  [5] = "#D6488B", /* magenta */
+  [4] = "#6882be", /* blue    */
+  [5] = "#cd81d0", /* magenta */
   [6] = "#419BA0", /* cyan    */
   [7] = "#e8d4c7", /* white   */
 
   /* 8 bright colors */
   [8]  = "#a2948b",  /* black   */
-  [9]  = "#A35B67", /* red     */
-  [10] = "#418B76", /* green   */
-  [11] = "#D59175", /* yellow  */
-  [12] = "#4C608B", /* blue    */
-  [13] = "#D6488B", /* magenta */
-  [14] = "#419BA0", /* cyan    */
+  [9]  = "#c95b67", /* red     */
+  [10] = "#41a776", /* green   */
+  [11] = "#df7d55", /* yellow  */
+  [12] = "#4c60b1", /* blue    */
+  [13] = "#bf65c2", /* magenta */
+  [14] = "#37a4aa", /* cyan    */
   [15] = "#e8d4c7", /* white   */
 
   /* special colors */
@@ -194,7 +197,7 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
@@ -211,6 +214,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ MODKEY|ShiftMask,    	XK_Return,	newterm,	{.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
